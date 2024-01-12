@@ -29,7 +29,7 @@ asort($items);
             <tr>
                 <th>#</th>
                 <?php
-                foreach ($items as &$item) {
+                foreach ($items as $item) {
                     echo '<th>' . $item . '</th>';
                 }
                 ?>
@@ -37,10 +37,10 @@ asort($items);
         </thead>
         <tbody>
             <?php
-            foreach ($students as &$student) {
+            foreach ($students as $student) {
                 echo '<tr>';
                 echo '<td>' . $student . '</td>';
-                foreach ($items as &$item) {
+                foreach ($items as $item) {
                     $sum = 0;
                     for ($i = 0; $i < count($data); $i++) {
                         if ($data[$i][0] == $student && $data[$i][1] == $item) {
